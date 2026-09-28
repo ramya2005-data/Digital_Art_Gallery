@@ -1,5 +1,5 @@
 import streamlit as st
-# LOGIN CHECK
+import database
 
 st.set_page_config(
     page_title="Digital Art Gallery",
