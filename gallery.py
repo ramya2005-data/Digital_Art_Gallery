@@ -291,10 +291,9 @@ if filtered_artworks:
 
                         try:
 
-                            st.image(
-                                "images/" + image,
-                                use_container_width=True
-                            )
+                            st.image("../images/" + image, use_container_width=True)
+    
+                            
 
                         except:
 
