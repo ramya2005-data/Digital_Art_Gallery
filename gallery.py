@@ -291,7 +291,7 @@ if filtered_artworks:
 
                         try:
 
-                            st.image("../images/" + image, use_container_width=True)
+                            st.image(os.path.join(os.path.dirname(os.path.dirname(__file__)), "images", image), use_container_width=True)
     
                             
 
