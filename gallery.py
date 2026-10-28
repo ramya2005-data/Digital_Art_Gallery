@@ -1,5 +1,6 @@
 import streamlit as st
 import sqlite3
+import os
 
 st.set_page_config(
     page_title="Digital Art Gallery",
