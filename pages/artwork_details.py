@@ -52,25 +52,34 @@ if artwork:
 
     # ---------------- IMAGE ----------------
 
-        with col1:
+        # ---------------- IMAGE ----------------
+
+    with col1:
 
         if image:
+
             image_path = os.path.join(
-                os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                os.path.dirname(
+                    os.path.dirname(
+                        os.path.abspath(__file__)
+                    )
+                ),
                 "images",
                 image
             )
 
             if os.path.exists(image_path):
+
                 st.image(
                     image_path,
                     use_container_width=True
                 )
+
             else:
+
                 st.warning(
                     f"Artwork image not found: {image}"
                 )
-
     # ---------------- INFORMATION ----------------
 
     with col2:
