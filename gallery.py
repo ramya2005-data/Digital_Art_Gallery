@@ -292,18 +292,16 @@ if filtered_artworks:
 
 
                      if image:
-                        
                         base_dir = os.path.dirname(os.path.dirname(__file__))
                         image_name = os.path.basename(image)
-                        
+
+                        if image_name.endswith(".jpg.jpeg"):
+                            image_name = image_name.replace(".jpg.jpeg", ".jpg")
+
                         image_path = os.path.join(base_dir, "images", image_name)
 
                         if os.path.isfile(image_path):
-                            st.image(
-                            
-                               image_path,
-                               use_container_width=True
-                            )
+                           st.image(image_path, use_container_width=True)
                         else:
                            st.warning(f"Image not found: {image_name}")
                     else:
