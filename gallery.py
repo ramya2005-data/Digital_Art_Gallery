@@ -307,7 +307,7 @@ if filtered_artworks:
                             
                             st.warning(f"Image not found: {image_name}")
                             
-                    else:
+                     else:
                        st.warning("No image assigned to this artwork.")
 
 
