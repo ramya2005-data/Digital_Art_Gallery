@@ -301,10 +301,12 @@ if filtered_artworks:
                         image_path = os.path.join(base_dir, "images", image_name)
 
                         if os.path.isfile(image_path):
-                           st.image(image_path, use_container_width=True)
+                            
+                            st.image(image_path, use_container_width=True)
                         else:
-                           st.warning(f"Image not found: {image_name}")
-                    else:
+                            
+                            st.warning(f"Image not found: {image_name}")
+                     else:
                        st.warning("No image assigned to this artwork.")
 
 
