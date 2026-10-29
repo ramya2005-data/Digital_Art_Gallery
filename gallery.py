@@ -288,19 +288,24 @@ if filtered_artworks:
 
                     # ---------------- IMAGE ----------------
 
-                    if image:
+                    
+# ---------------- IMAGE ----------------
 
-                        try:
+if image:
+    base_dir = os.path.dirname(os.path.dirname(__file__))
+    image_name = os.path.basename(image)
+    image_path = os.path.join(base_dir, "images", image_name)
 
-                            st.image(os.path.join(os.path.dirname(os.path.dirname(__file__)), "images", image), use_container_width=True)
-    
-                            
+    if os.path.isfile(image_path):
+        st.image(
+            image_path,
+            use_container_width=True
+        )
+    else:
+        st.warning(f"Image not found: {image_name}")
+else:
+    st.warning("No image assigned to this artwork.")
 
-                        except:
-
-                            st.warning(
-                                "Artwork image unavailable."
-                            )
 
 
                     # ---------------- TITLE ----------------
